@@ -3,7 +3,7 @@ import styles from './doc.module.css';
 import NavBar from '../app/navbar/navbar';
 
 const ImagePage = () => {
-    let document = {};
+    let document = {name:"oui"};
     document.name = "Ambassador Program XRPL";
     return (
         <div className={styles.container}>
