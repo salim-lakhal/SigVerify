@@ -1,0 +1,130 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  min-height: 100vh; /* Ensures it takes the full viewport height */
+}
+
+@media (min-width: 1024px) {
+  .section {
+    flex-direction: row;
+  }
+}
+
+.content {
+  margin-bottom: 1.5rem;
+}
+
+.content h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  color: black;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  margin-top: 0.5rem;
+  color: #666;
+}
+
+.card a {
+  color: #007bff;
+  text-decoration: underline;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+.logo {
+  border-radius: 50%;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.inputGroup {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.inputGroup input {
+  flex: 1;
+  height: 2.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.inputGroup button {
+  height: 2.5rem;
+  padding: 0 1rem;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: white;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.inputGroup button:hover {
+  background-color: #0056b3;
+}
+
+.imageContainer {
+  text-align: center;
+}
+
+.imageContainer img {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fixedIcons {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.fixedIcons svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.fixedIcons svg:hover {
+  color: #333;
+}
