@@ -1,4 +1,4 @@
-.header {
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,9 +14,9 @@
 .logoWrapper {
     position: relative;
     height: 3rem;
-    width: 5rem;
+    width: 4rem;
     overflow: hidden;
-    margin-right: 1rem;
+    margin-right: .6rem;
 }
 
 .logo {
@@ -32,33 +32,38 @@
 }
 
 .burger {
-    width: 25px;
+    width: 33px;
     height: 3px;
     background-color: #333;
-    margin: 4px 0;
+    margin: 2.5px 0;
 }
 
 .sigtitle {
     font-size: 1.5rem;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    font-family: "Exo 2", sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+  }
 
 .navButtons {
     display: flex;
-    justify-content: space-between;
-    margin-left: 10em;
+    justify-content: end;
+    gap: 6px;
+      /* justify-content: space-between; */
+    margin-left: 10px;
     width: 100%;
 }
 
 .navButton {
+    min-width: 90px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 10px;
-    padding: 10px 20px;
-    margin: 0 10px;
+    padding: 10px;
+    /* margin: 0 10px; */
     cursor: pointer;
+    font-size: .8rem;
 }
 
 .navButton:hover {
@@ -66,17 +71,17 @@
 }
 
 .signOutButton {
-    background-color: #007bff;
+    background-color: #c94a2a;
     color: white;
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
-    margin: 0 10px;
+    /* margin: 0 10px; */
     cursor: pointer;
 }
 
 .signOutButton:hover {
-    background-color: #0056b3;
+    background-color: #a73d23;
 }
 
 .showMenu {

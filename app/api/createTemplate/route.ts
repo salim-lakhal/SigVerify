@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Missing required fields in request body' }, { status: 400 });
   }
 
-  try {
+  try { 
     const client = await clientPromise;
     const db = client.db("test");
     const templatesCollection = db.collection("templates");

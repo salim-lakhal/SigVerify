@@ -25,6 +25,7 @@ const Dashboard = () => {
   const [error, setError] = useState<string | null>(null);
   const [userId, setUserId] = useState<string | null>(null);
 
+  console.log("user: ", user)
   const fetchData = useCallback(async () => {
     if (!user) return;
 
@@ -129,7 +130,9 @@ const Dashboard = () => {
       <NavBar />
       {loading && <LoadingScreen />}
       <div className={styles.content}>
-        <h2>Welcome {user?.firstName}!</h2>
+        <h2>
+          Welcome <span style={{ color: '#007bff' }}>{user?.firstName}</span>!
+        </h2>
         <h2>Choose a Smart Document Template:</h2>
         <div className={styles.templates}>
           <button className={styles.templateCard} onClick={() => handleTemplate('new')}>
@@ -151,15 +154,14 @@ const Dashboard = () => {
             <p>Create a new Smart Document</p>
           </button>
           {data.map((item) => (
-              <button key={item._id} className={styles.templateCard} onClick={() => handleTemplate(item.name)}>
-                <Image src="/contract.png" alt="Document Template" className={styles.templateImage} width={500} height={500} />
-                <div className={styles.templateContent}>
-                  <p>{item.name}</p>
-                  <p>{item.status}</p>
-                </div>
-              </button>
-            ))
-          }
+            <button key={item._id} className={styles.templateCard} onClick={() => handleTemplate(item.name)}>
+              <Image src="/contract.png" alt="Document Template" className={styles.templateImage} width={500} height={500} />
+              <div className={styles.templateContent}>
+                <p>{item.name}</p>
+                <p>{item.status}</p>
+              </div>
+            </button>
+          ))}
         </div>
       </div>
     </div>
