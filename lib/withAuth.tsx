@@ -6,17 +6,16 @@ import { useRouter } from 'next/navigation';
 
 type ComponentType = React.ComponentType<any>;
 const withAuth = (Component: ComponentType) => {
-  console.log("withAuth calledfdsdsf");
   const AuthenticatedComponent: React.FC = (props) => {
     const { isLoaded, isSignedIn } = useAuth();
     const router = useRouter();
 
     useEffect(() => {
-      if (isLoaded && !isSignedIn) {
+/*       if (isLoaded && !isSignedIn) {
         if (typeof window !== 'undefined') {
           router.push('/sign-in');
         }
-      }
+      } */
     }, [isLoaded, isSignedIn, router]);
 
     if (!isLoaded || !isSignedIn) {

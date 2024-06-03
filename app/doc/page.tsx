@@ -1,12 +1,13 @@
+"use client";
+
 import React from 'react';
-import styles from './manage.module.css';
+import styles from './doc.module.css';
 import NavBar from '../../components/navbar/navbar';
 import withAuth from '../../lib/withAuth';
 import Image from 'next/image';
 
 const Doc = () => {
     let document = {name:"oui"};
-    console.log("sfaafs");
     document.name = "Ambassador Program XRPL";
     return (
         <div className={styles.container}>
@@ -23,4 +24,4 @@ const Doc = () => {
     );
 };
 
-export default withAuth(Doc)
+export default withAuth(Doc);
