@@ -1,6 +1,7 @@
+"use client";
 import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import styles from './navbar.module.css';
 import { SignOutButton } from '@clerk/nextjs';
 import type { MouseEvent, KeyboardEvent } from 'react';
@@ -64,7 +65,13 @@ function NavBar() {
         <div className={styles.header}>
             <div className={styles.logoContainer}>
                 <div className={styles.logoWrapper}>
-                    <Image src="/contract.png" alt="Logo" className={styles.logo} layout="fill" />
+                    <Image
+                        src="/contract.png"
+                        alt="Document Template"
+                        className={styles.logo}
+                        width={500}
+                        height={500}
+                    />
                 </div>
                 <h2 className={styles.sigtitle}>SigVerify</h2>
             </div>

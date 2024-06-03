@@ -79,7 +79,7 @@ const Dashboard = () => {
     } catch (error: any) {
       setError(error.message);
     }
-  }, [userId]);
+  }, [user, userId]);
 
   const getTemplates = useCallback(async () => {
     if (!user) return;
@@ -104,7 +104,7 @@ const Dashboard = () => {
       setLoading(false);
       setError(error.message);
     }
-  }, [userId]);
+  }, [user, userId]);
 
   useEffect(() => {
     if (user) {
@@ -116,7 +116,7 @@ const Dashboard = () => {
     if (user) {
       createTemplate().then(getTemplates);
     }
-  }, [userId, createTemplate, getTemplates]);
+  }, [user, userId, createTemplate, getTemplates]);
 
   const router = useRouter();
 

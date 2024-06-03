@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './profile.module.css';
 import NavBar from '../../components/navbar/navbar';
-import withAuth from '../../../lib/withAuth';
+import withAuth from '../../lib/withAuth';
 import Image from 'next/image';
 
 const Profile = () => {
@@ -23,4 +23,3 @@ const Profile = () => {
 };
 
 export default withAuth(Profile);
-;

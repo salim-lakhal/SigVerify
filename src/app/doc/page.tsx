@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './doc.module.css';
 import NavBar from '../../components/navbar/navbar';
-import withAuth from '../../../lib/withAuth';
+import withAuth from '../../lib/withAuth';
 
 const Doc = () => {
     let document = { name: "oui" };

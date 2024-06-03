@@ -1,6 +1,6 @@
-import { getAuth } from "@clerk/nextjs/dist/types/server";
+import { getAuth } from "@clerk/nextjs/server";
 import type { NextApiRequest, NextApiResponse } from "next";
-import clientPromise from "../../../../lib/mongodb";
+import clientPromise from "../../../lib/mongodb";
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { userId } = getAuth(req);

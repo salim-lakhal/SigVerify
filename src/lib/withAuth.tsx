@@ -1,10 +1,13 @@
-"use client";
+'use client';
+
+import React, { useEffect } from 'react'; // Add this import
 import { useAuth } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
 
-const withAuth = (Component: any) => {
-  const AuthenticatedComponent = (props: any) => {
+type ComponentType = React.ComponentType<any>;
+
+const withAuth = (Component: ComponentType) => {
+  const AuthenticatedComponent: React.FC = (props) => {
     const { isLoaded, isSignedIn } = useAuth();
     const router = useRouter();
 
