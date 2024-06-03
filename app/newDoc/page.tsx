@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import styles from './newDoc.module.css';
 import NavBar from '../../components/navbar/navbar';
