@@ -1,0 +1,181 @@
+.container {
+    width: 100%;
+    justify-content: center; /* Center the document */
+    min-height: 100vh; /* Ensure container takes full viewport height */
+}
+
+.document {
+    padding: 10vw 10vw; /* Proportional padding to the viewport width */
+    margin: 0 auto;
+    border: black 1px solid;
+    width: 100vw; /* Adjust width as needed */
+    height: calc(100vw * 1.414); /* Maintain A4 aspect ratio */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.header {
+	padding-bottom: 2vw;
+}
+
+.body{
+
+}
+
+.section {
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+}
+
+.description {
+	padding-left: 6vw;
+	padding-right: 4vw;
+
+}
+
+.signatures{
+	display: flex;
+	justify-content: space-between;
+	padding-right: 20vw;
+}
+.initials {
+	padding-left: 8vw;
+	padding-right: 4vw;
+	padding-top: 4vw;
+	padding-bottom: 4vw;
+}
+
+.payout {
+	padding-left: 10vw;
+	padding-right: 6vw;
+}
+
+.payoutTitle {
+	padding-left: 8vw;
+	padding-right: 6vw;
+}
+
+.h1 {
+    color: black;
+    font-family: Calibri, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 3vw;
+    padding-top: 0.5vw;
+    text-indent: -4.9vw;
+    text-align: center;
+	padding-left: 14vw;
+	padding-right: 14vw;
+}
+
+.p {
+    color: black;
+    font-family: Calibri, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 2vw;
+    margin: 0;
+    padding-top: 1.4vw;
+    text-indent: 0;
+    text-align: left;
+}
+
+.h2 {
+    color: black;
+    font-family: Calibri, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 2vw; /* Responsive font size */
+    padding-top: 1.4vw;
+    padding-left: 4vw;
+    text-indent: -1.7vw;
+    text-align: left;
+}
+
+.h3 {
+    color: black;
+    font-family: Calibri, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 2.5vw; /* Responsive font size */
+    padding-top: 5vw;
+    padding-left: 4vw;
+    text-indent: -1.7vw;
+    text-align: left;
+}
+
+.s1 {
+    color: black;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: underline;
+    font-size: 1.5vw; /* Responsive font size */
+	margin-left: 25vw;
+}
+
+.s2 {
+    color: black;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 1vw; /* Responsive font size */
+}
+
+.s3 {
+    color: black;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 1.5vw; /* Responsive font size */
+}
+
+.l1 {
+    padding-left: 0;
+    list-style: none;
+    counter-reset: c1;
+}
+
+.l1 > li {
+    counter-increment: c1;
+    font-family: Calibri, sans-serif;
+    font-size: 1.5vw;
+}
+
+.l1 > li::before {
+    content: counter(c1) ". ";
+    font-family: Calibri, sans-serif;
+    font-size: 1.5vw;
+    padding-right: 0.5vw;
+}
+
+.l2,
+.l3,
+.l4,
+.l5 {
+    padding-left: 2vw;
+}
+
+.l2 > li,
+.l3 > li,
+.l4 > li,
+.l5 > li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.l2 > li::before,
+.l3 > li::before,
+.l4 > li::before,
+.l5 > li::before {
+    content: "o ";
+    font-family: "Courier New", monospace;
+    font-size: 1.5vw;
+    padding-right: 0.5vw;
+}
