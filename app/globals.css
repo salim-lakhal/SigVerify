@@ -85,12 +85,6 @@
        height: 100%;
        overflow-x: hidden;
        /* Prevent horizontal overflow */
-       background: url('/contract.png') no-repeat center center fixed;
-       /* Set background image */
-       background-size: cover;
-       /* Ensure the background image covers the entire viewport */
-       z-index: -1;
-       /* Place the background image behind other elements */
      }
 
      #__next,

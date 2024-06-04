@@ -66,14 +66,14 @@ function NavBar() {
             <div className={styles.logoContainer}>
                 <div className={styles.logoWrapper}>
                     <Image
-                        src="/contract.png"
+                        src="/logo.jpg"
                         alt="Document Template"
                         className={styles.logo}
                         width={500}
                         height={500}
                     />
                 </div>
-                <h2 className={styles.sigtitle}>SigVerify</h2>
+                <button className={styles.sigtitle} onClick={navigateToDashboard}>SigVerify</button>
             </div>
             <div ref={menuIconRef} className={styles.menuIcon} onClick={toggleMenu}>
                 <div className={styles.burger}></div>
