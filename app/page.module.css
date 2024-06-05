@@ -16,6 +16,12 @@
   flex-direction: column;
 }
 
+.h1{
+	font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Exo 2", sans-serif;
+}
+
 .content h2 {
   font-size: 3rem;
   font-weight: 800;

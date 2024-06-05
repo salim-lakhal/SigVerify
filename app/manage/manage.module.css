@@ -2,6 +2,7 @@
     width: 100%;
     justify-content: center; /* Center the document */
     min-height: 100vh;
+	background-color: white;
 }
 
 .document {

@@ -23,7 +23,7 @@ const NewDoc = () => {
         <CardContent>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <div className="relative group p-4 border-2 border-slate-300 rounded-md transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg">
-              <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
+              <Link href="/set-document" className="absolute inset-0 z-10" prefetch={false}>
                 <span className="sr-only">View Template</span>
               </Link>
               <div className="p-2 border-2 rounded-lg">
@@ -57,7 +57,7 @@ const NewDoc = () => {
               </div>
               <div className="flex-1 pt-2 mt-2">
                 <h3 className="font-semibold tracking-tight leading-[5px] text-sm">Ripple Pledge</h3>
-                <small className="text-xs leading-[2px] tracking-tight text-gray-500 dark:text-gray-400">Campus Ambassador Program</small>
+                <small className="text-xs leading-[2px] tracking-tight text-gray-500 dark:text-gray-400">Trainee Certification</small>
               </div>
             </div>
             <div className="relative group p-4 border-2 border-slate-300 rounded-md transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg">
@@ -75,8 +75,8 @@ const NewDoc = () => {
                 />
               </div>
               <div className="flex-1 pt-2 mt-2">
-                <h3 className="font-semibold tracking-tight leading-[5px] text-sm">Ripple Pledge</h3>
-                <small className="text-xs leading-[2px] tracking-tight text-gray-500 dark:text-gray-400">Campus Ambassador Program</small>
+                <h3 className="font-semibold tracking-tight leading-[5px] text-sm">Commons Hospital</h3>
+                <small className="text-xs leading-[2px] tracking-tight text-gray-500 dark:text-gray-400">Medical Prescription</small>
               </div>
             </div>
           </div>

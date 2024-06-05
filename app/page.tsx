@@ -20,8 +20,8 @@ const Page = () => {
     <div className={styles.container}>
       <header className={styles.header}>
         <a href="#" className={styles.logo}>
-          <Image src="/contract.png" alt="Logo" width={40} height={40} />
-          <h2>SigVerify</h2>
+          <Image src="/logo.jpg" alt="Logo" width={40} height={40} />
+          <h1 className={styles.h1}>SigVerify</h1>
         </a>
         <button onClick={handleSignIn} className={styles.button} style={{ fontWeight: '600', padding: '10px 30px', fontSize: '1rem'}}>
           Sign In

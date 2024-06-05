@@ -70,16 +70,20 @@
     color:#333;
 }
 
-.signOutButton {
+.signout{
+	margin:auto;
+}
+
+/* .signOutButton {
     background-color: #c94a2a;
     color: white;
     border: none;
     border-radius: 5px;
     padding: 3px 20px;
     font-size: .8rem;
-    /* margin: 0 10px; */
+    /* margin: 0 10px; 
     cursor: pointer;
-}
+} */
 
 .signOutButton:hover {
     background-color: #a73d23;
