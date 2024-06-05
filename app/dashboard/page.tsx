@@ -13,7 +13,7 @@ const Dashboard = () => {
       <div className="absolute inset-0 bg-white opacity-60 z-0"></div>
       <div className="relative flex flex-col h-full z-10">
         <NavBar />
-        <div className="flex-1 overflow-auto py-8">
+        <div className="flex-1 py-8 md:px-8 lg:px-24 xl:px-44 max-w-[1200px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 p-4 md:p-6 lg:p-8">
             {/* New "Create New Document" Card */}
             <Card className="col-span-1 lg:col-span-2">
