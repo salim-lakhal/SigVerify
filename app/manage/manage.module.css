@@ -72,11 +72,16 @@
 }
 
 .checkbox {
-    margin-left: 6vw; /* Adjust as needed for positioning */
-    margin-right: 2vw; /* Space between checkbox and text */
+    margin-left: 6vw;
+    margin-right: 2vw;
 }
 
 .h1 {
+	text-align: center;
+	
+}
+
+.docTitle {
     color: black;
     font-family: Calibri, sans-serif;
     font-style: normal;

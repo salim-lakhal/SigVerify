@@ -74,9 +74,6 @@ const Manage = () => {
                     </div>
                 </div>
             </div>
-			<div className={styles.popup}>
-                Sign Here: <input type="text" />
-            </div>
         </div>
     );
 };
