@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation';
 import styles from './navbar.module.css';
 import { SignOutButton } from '@clerk/nextjs';
 import type { MouseEvent, KeyboardEvent } from 'react';
+import { FaSignOutAlt } from 'react-icons/fa';
+
 
 function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +52,7 @@ function NavBar() {
         router.push('/dashboard');
     };
     const navigateToNewDoc = () => {
-        router.push('/newdoc');
+        router.push('/create-document');
     };
 
     const navigateToManageDocs = () => {
@@ -62,34 +64,36 @@ function NavBar() {
     };
 
     return (
-        <div className={styles.header}>
-            <div className={styles.logoContainer}>
-                <div className={styles.logoWrapper}>
-                    <Image
-                        src="/logo.jpg"
-                        alt="Document Template"
-                        className={styles.logo}
-                        width={500}
-                        height={500}
-                    />
-                </div>
-                <button className={styles.sigtitle} onClick={navigateToDashboard}>SigVerify</button>
-            </div>
-            <div ref={menuIconRef} className={styles.menuIcon} onClick={toggleMenu}>
-                <div className={styles.burger}></div>
-                <div className={styles.burger}></div>
-                <div className={styles.burger}></div>
-            </div>
-            <div ref={menuRef} className={`${styles.navButtons} ${isOpen ? styles.showMenu : ''}`}>
-                <button className={styles.navButton} onClick={navigateToDashboard}>Dashboard</button>
-                <button className={styles.navButton} onClick={navigateToNewDoc}>New Document</button>
-                <button className={styles.navButton} onClick={navigateToManageDocs}>Manage Documents</button>
-                <button className={styles.navButton} onClick={navigateToProfile}>Profile</button>
-                <SignOutButton>
-                    <button className={styles.signOutButton}>Sign Out</button>
-                </SignOutButton>
-            </div>
+      <div className={styles.header}>
+        <div className={styles.logoContainer}>
+          <div className={styles.logoWrapper}>
+            <Image src="/contract.png" alt="Document Template" className={styles.logo} width={500} height={500} />
+          </div>
+          <h2 className={styles.sigtitle}>SigVerify</h2>
         </div>
+        <div ref={menuIconRef} className={styles.menuIcon} onClick={toggleMenu}>
+          <div className={styles.burger}></div>
+          <div className={styles.burger}></div>
+          <div className={styles.burger}></div>
+        </div>
+        <div ref={menuRef} className={`${styles.navButtons} ${isOpen ? styles.showMenu : ''}`}>
+          <button className={styles.navButton} onClick={navigateToDashboard}>
+            Dashboard
+          </button>
+          <button className={styles.navButton} onClick={navigateToNewDoc}>
+            Create Document
+          </button>
+          <button className={styles.navButton} onClick={navigateToManageDocs}>
+            Manage Documents
+          </button>
+          <button className={styles.navButton} onClick={navigateToProfile}>
+            Profile
+          </button>
+          <SignOutButton>
+            <FaSignOutAlt className='text-red-700 h-12 w-6 hover:text-red-900 mr-4'/>
+          </SignOutButton>
+        </div>
+      </div>
     );
 }
 

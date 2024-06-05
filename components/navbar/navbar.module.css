@@ -55,26 +55,28 @@
 
 .navButton {
     min-width: 90px;
-    background-color: #007bff;
-    color: white;
+    /* background-color: #007bff; */
+    color: rgb(119, 119, 119);
     border: none;
     border-radius: 10px;
-    padding: 10px;
+    padding: 8px;
     /* margin: 0 10px; */
     cursor: pointer;
     font-size: .8rem;
 }
 
 .navButton:hover {
-    background-color: #0056b3;
+    /* background-color: #0056b3; */
+    color:#333;
 }
 
 .signOutButton {
     background-color: #c94a2a;
     color: white;
     border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
+    border-radius: 5px;
+    padding: 3px 20px;
+    font-size: .8rem;
     /* margin: 0 10px; */
     cursor: pointer;
 }

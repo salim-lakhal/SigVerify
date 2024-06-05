@@ -75,7 +75,7 @@
   font-family: "Exo 2", sans-serif;
 }
 
-.button {
+/* .button {
   background-color: white;
   color: #007bff;
   border: 1px solid #007bff;
@@ -91,7 +91,7 @@
   background-color: #007bff;
   color: white;
   box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
-}
+} */
 
 .inputGroup {
   display: flex;
