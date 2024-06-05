@@ -63,14 +63,14 @@ const Component = () => {
                 </div>
               </div>
             </div>
-            <div className="flex gap-4 text-sm items-center">
+            {/* <div className="flex gap-4 text-sm items-center">
               <Button variant="outline" className="bg-slate-900 hover:bg-slate-700 text-white px-4 py-2 rounded-[.25rem]">
-                Edit Profile
+                Edit
               </Button>
               <Button variant="outline" className="bg-slate-900 hover:bg-slate-700 text-white px-4 py-2 rounded-[.25rem]">
                 Settings
               </Button>
-            </div>
+            </div> */}
           </div>
           <Separator className="my-8" />
           <hr />
