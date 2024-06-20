@@ -1,1 +1,1 @@
-SigVerify V2
+SigVerify is a Document Workflow Solution combined with onchain signatures
