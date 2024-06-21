@@ -1,64 +1,74 @@
+//components/signature/sign.tsx
 import React, { useRef, useState, useEffect } from "react";
 import SignatureCanvas from "react-signature-canvas";
 import styles from "./sign_style.module.css";
 
-const SignaturePad = ({ closeModal }) => {
-  const sigCanvas = useRef({});
-  const initialCanvas = useRef({});
+interface SignaturePadProps {
+  closeModal: () => void;
+}
+
+const SignaturePad: React.FC<SignaturePadProps> = ({ closeModal }) => {
+  const sigCanvas = useRef<any>(null); // Initialize with `any` type to allow for null checks
+  const initialCanvas = useRef<any>(null); // Initialize with `any` type to allow for null checks
 
   const [step, setStep] = useState(1);
-  const [signatureData, setSignatureData] = useState(null);
-  const [initialsData, setInitialsData] = useState(null);
+  const [signatureData, setSignatureData] = useState<string | null>(null); // Specify null as possible type for signatureData
+  const [initialsData, setInitialsData] = useState<string | null>(null); // Specify null as possible type for initialsData
   const [sigBorderColor, setSigBorderColor] = useState("");
   const [initialBorderColor, setInitialBorderColor] = useState("");
 
   useEffect(() => {
     if (step === 1 && signatureData) {
-      sigCanvas.current.fromDataURL(signatureData);
+      sigCanvas.current?.fromDataURL(signatureData); // Null check with optional chaining
       setSigBorderColor(styles.borderGreen);
     }
   }, [step, signatureData]);
 
   useEffect(() => {
     if (step === 2 && initialsData) {
-      initialCanvas.current.fromDataURL(initialsData);
+      initialCanvas.current?.fromDataURL(initialsData); // Null check with optional chaining
       setInitialBorderColor(styles.borderGreen);
     }
   }, [step, initialsData]);
 
   const clearSignature = () => {
-    sigCanvas.current.clear();
-    setSigBorderColor(styles.borderRed);
-    setTimeout(() => setSigBorderColor(""), 1000);
+    if (sigCanvas.current) {
+      sigCanvas.current.clear();
+      setSigBorderColor(styles.borderRed);
+      setTimeout(() => setSigBorderColor(""), 1000);
+    }
   };
 
   const saveSignature = () => {
-    const dataURL = sigCanvas.current
-      .getTrimmedCanvas()
-      .toDataURL("image/svg+xml");
-    setSignatureData(dataURL);
-    setSigBorderColor(styles.borderGreen);
-    setStep(2);
+    if (sigCanvas.current) {
+      const dataURL = sigCanvas.current
+        .getTrimmedCanvas()
+        .toDataURL("image/svg+xml");
+      setSignatureData(dataURL);
+      setSigBorderColor(styles.borderGreen);
+      setStep(2);
+    }
   };
 
   const clearInitials = () => {
-    initialCanvas.current.clear();
-    setInitialBorderColor(styles.borderRed);
-    setTimeout(() => setInitialBorderColor(""), 1000);
+    if (initialCanvas.current) {
+      initialCanvas.current.clear();
+      setInitialBorderColor(styles.borderRed);
+      setTimeout(() => setInitialBorderColor(""), 1000);
+    }
   };
 
   const saveInitials = () => {
-    const dataURL = initialCanvas.current
-      .getTrimmedCanvas()
-      .toDataURL("image/svg+xml");
-    setInitialsData(dataURL);
-    setInitialBorderColor(styles.borderGreen);
-    setStep(3);
-    // Save to database here
-    console.log("Signature and Initials saved:", {
-      signatureData,
-      initialsData,
-    });
+    if (initialCanvas.current) {
+      const dataURL = initialCanvas.current
+        .getTrimmedCanvas()
+        .toDataURL("image/svg+xml");
+      setInitialsData(dataURL);
+      setInitialBorderColor(styles.borderGreen);
+      setStep(3);
+      // Save to database here
+      console.log("Signature and Initials saved:", { signatureData, initialsData });
+    }
   };
 
   const goBackToSignature = () => {
@@ -106,7 +116,7 @@ const SignaturePad = ({ closeModal }) => {
               Confirm
             </button>
             <div className={styles["acknowledge"]}>
-              By selecting "Confirm," I acknowledge and agree that the signature
+              By selecting &quot;Confirm,&quot; I acknowledge and agree that the signature
               and initials generated will constitute my electronic signature and
               initials for all purposes when used by me or my authorized
               representative on documents, including but not limited to legally
@@ -128,3 +138,5 @@ const SignaturePad = ({ closeModal }) => {
 };
 
 export default SignaturePad;
+
+

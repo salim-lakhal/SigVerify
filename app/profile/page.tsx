@@ -36,6 +36,7 @@ import NavBar from '../../components/navbar/navbar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useUser } from '@clerk/nextjs';
+import React from 'react'; // Ensure React import is included if not already
 
 const Component = () => {
   const { user } = useUser();
@@ -63,14 +64,6 @@ const Component = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="flex gap-4 text-sm items-center">
-              <Button variant="outline" className="bg-slate-900 hover:bg-slate-700 text-white px-4 py-2 rounded-[.25rem]">
-                Edit
-              </Button>
-              <Button variant="outline" className="bg-slate-900 hover:bg-slate-700 text-white px-4 py-2 rounded-[.25rem]">
-                Settings
-              </Button>
-            </div> */}
           </div>
           <Separator className="my-8" />
           <hr />
@@ -84,7 +77,7 @@ const Component = () => {
                       <FileIcon className="w-8 h-8 text-gray-500 dark:text-gray-400" />
                       <div className="grid gap-1">
                         <div className="font-medium">KYC</div>
-                        <div className="text-sm text-gray-500 dark:text-gray-400">Update "Know Your Customer" Information.</div>
+                        <div className="text-sm text-gray-500 dark:text-gray-400">Update &quot;Know Your Customer&quot; Information.</div>
                       </div>
                     </div>
                     <Button variant="outline" size="sm">
@@ -131,7 +124,12 @@ const Component = () => {
 
 export default withAuth(Component);
 
-function FileIcon(props) {
+interface IconProps {
+  className?: string;
+  // Add any other props that your SVG component might receive
+}
+
+function FileIcon(props: IconProps) {
   return (
     <svg
       {...props}
@@ -151,7 +149,7 @@ function FileIcon(props) {
   );
 }
 
-function InboxIcon(props) {
+function InboxIcon(props: IconProps) {
   return (
     <svg
       {...props}
@@ -171,7 +169,7 @@ function InboxIcon(props) {
   );
 }
 
-function KeyIcon(props) {
+function KeyIcon(props: IconProps) {
   return (
     <svg
       {...props}
@@ -192,7 +190,7 @@ function KeyIcon(props) {
   );
 }
 
-function UserIcon(props) {
+function UserIcon(props: IconProps) {
   return (
     <svg
       {...props}
@@ -212,7 +210,7 @@ function UserIcon(props) {
   );
 }
 
-function WalletIcon(props) {
+function WalletIcon(props: IconProps) {
   return (
     <svg
       {...props}
@@ -231,4 +229,6 @@ function WalletIcon(props) {
     </svg>
   );
 }
+
+export { FileIcon, InboxIcon, KeyIcon, UserIcon, WalletIcon };
 

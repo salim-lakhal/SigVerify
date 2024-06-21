@@ -122,7 +122,12 @@ const Dashboard = () => {
 
 export default withAuth(Dashboard);
 
-function CalendarIcon(props) {
+interface IconProps extends React.SVGProps<SVGSVGElement> {
+  // Ajoutez d'autres propriétés spécifiques à vos icônes SVG si nécessaire
+  
+}
+
+function CalendarIcon(props: IconProps) {
   return (
     <svg
       {...props}
@@ -144,7 +149,7 @@ function CalendarIcon(props) {
   );
 }
 
-function FileIcon(props) {
+function FileIcon(props: IconProps) {
   return (
     <svg
       {...props}
@@ -164,7 +169,7 @@ function FileIcon(props) {
   );
 }
 
-function HomeIcon(props) {
+function HomeIcon(props: IconProps) {
   return (
     <svg
       {...props}
@@ -184,7 +189,7 @@ function HomeIcon(props) {
   );
 }
 
-function MoveHorizontalIcon(props) {
+function MoveHorizontalIcon(props: IconProps) {
   return (
     <svg
       {...props}
@@ -205,7 +210,7 @@ function MoveHorizontalIcon(props) {
   );
 }
 
-function SettingsIcon(props) {
+function SettingsIcon(props: IconProps) {
   return (
     <svg
       {...props}
@@ -225,7 +230,7 @@ function SettingsIcon(props) {
   );
 }
 
-function PlusIcon(props) {
+function PlusIcon(props: IconProps) {
   return (
     <svg
       {...props}
