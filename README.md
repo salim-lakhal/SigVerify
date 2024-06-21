@@ -17,18 +17,9 @@ Building on the tried-and-tested foundation of the XRPL, we're not only enhancin
 
 ## Preview Unfinished Mock Demo
 
-![Landing Page](./sigVerify-frontend/src/assets/mobile-createAccount.png)
-![Landing Page](./sigVerify-frontend/src/assets/mobile-genKeypairs.png)
-![Landing Page](./sigVerify-frontend/src/assets/mobile-dashboard.png)
-![Landing Page](./sigVerify-frontend/src/assets/mobile-unauthenticatedProfile.png)
-![Landing Page](./sigVerify-frontend/src/assets/mobile-authenticateWallet.png)
-![Landing Page](./sigVerify-frontend/src/assets/mobile-profile.png)
-![Landing Page](./sigVerify-frontend/src/assets/mobile-documents.png)
-![Landing Page](./sigVerify-frontend/src/assets/mobile-documentDetails.png)
-![Landing Page](./sigVerify-frontend/src/assets/mobile-decryptedDocument.png)
-![Landing Page](./sigVerify-frontend/src/assets/mobile-signDocument.png)
-![Landing Page](./sigVerify-frontend/src/assets/mobile-documentUpload.png)
-![Landing Page](./sigVerify-frontend/src/assets/mobile-navigation.png)
+![image](https://github.com/salim-lakhal/SigVerify/assets/145379511/f7f44484-515c-4cf9-9a6f-fe1cd0c7e255)
+
+
 
 <br />
 <hr>
