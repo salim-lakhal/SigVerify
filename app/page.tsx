@@ -4,7 +4,11 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import styles from './page.module.css';
+import { ClerkProvider } from '@clerk/clerk-react'; // Import ClerkProvider
 
+
+// Import your publishable key
+const PUBLISHABLE_KEY = "pk_test_YXdhaXRlZC1sZWVjaC01Ny5jbGVyay5hY2NvdW50cy5kZXYk"
 const Page = () => {
   const router = useRouter();
 
