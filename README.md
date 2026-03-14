@@ -5,9 +5,35 @@
 
 A document signing and signature verification platform built on the [XRP Ledger](https://xrpl.org). SigVerify uses blockchain immutability to provide tamper-proof, decentralized signature validation — replacing trust in a central authority with cryptographic proof on-chain.
 
-## Demo
+## Screenshots
 
-<!-- TODO: demo video -->
+**Landing Page**
+
+![Landing page](https://github.com/salim-lakhal/SigVerify/assets/145379511/f7f44484-515c-4cf9-9a6f-fe1cd0c7e255)
+
+**Dashboard**
+
+![Dashboard](https://github.com/salim-lakhal/SigVerify/assets/145379511/7bc9e588-2504-4edb-b621-6bc6f519aa98)
+
+**Document Signing Flow**
+
+![Document view](https://github.com/salim-lakhal/SigVerify/assets/145379511/81bb23dc-4700-44d4-b4bb-7f4ed77e0c08)
+
+![Signature pad](https://github.com/salim-lakhal/SigVerify/assets/145379511/c86f57f9-d390-4e60-a6f0-cf74877f627a)
+
+![Initials capture](https://github.com/salim-lakhal/SigVerify/assets/145379511/53047772-89d1-4a3d-af17-5104391c740a)
+
+![Signature confirmation](https://github.com/salim-lakhal/SigVerify/assets/145379511/4acab52b-4fcb-4b32-8a1c-5ba5014e7b41)
+
+**Document Management**
+
+![Document list](https://github.com/salim-lakhal/SigVerify/assets/145379511/3f5b01c1-806c-494a-9b95-f1724c6647af)
+
+![Send document](https://github.com/salim-lakhal/SigVerify/assets/145379511/c136844b-09b8-4912-8f5b-d8dc14451a8c)
+
+**User Profile**
+
+![Profile page](https://github.com/salim-lakhal/SigVerify/assets/145379511/9095b82d-0b64-44d1-8ca7-392375180920)
 
 ## How It Works
 
