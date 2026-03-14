@@ -1,52 +1,19 @@
-// 'use client'
-// import React from 'react';
-// import styles from './profile.module.css';
-// import NavBar from '../../components/navbar/navbar';
-// import withAuth from '@/lib/withAuth'; // Make sure this path is correct
-// import Image from 'next/image';
-
-// const Profile = () => {
-//   let document = { name: 'oui' };
-//   document.name = 'Ambassador Program XRPL';
-//   return (
-//     <div className={styles.container}>
-//       <NavBar />
-//       {/* <h2 className={styles.title}>Document: {document.name}</h2>
-//       <Image src="/contract.png" alt="Document Template" className={styles.templateImage} width={500} height={500} />
-//       <div className={styles.popup}>
-//         Sign Here: <input type="text" />
-//       </div>
-//       <button>Submit</button> */}
-//     </div>
-//   );
-// };
-
-// export default withAuth(Profile);
-
 'use client';
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/N0PPCsDqoRD
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
-import withAuth from '@/lib/withAuth'; // Make sure this path is correct
+import withAuth from '@/lib/withAuth';
 import { Avatar, AvatarImage, AvatarFallback } from '@radix-ui/react-avatar';
 import { Separator } from '@radix-ui/react-separator';
 import NavBar from '../../components/navbar/navbar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useUser } from '@clerk/nextjs';
-import React from 'react'; // Ensure React import is included if not already
+import React from 'react';
 
 const Component = () => {
   const { user } = useUser();
-  console.log('USER: ', user);
   return (
     <div className="relative w-full h-full bg-cover bg-center" style={{ backgroundImage: 'url(/path/to/your/background.jpg)' }}>
-      {/* Overlay */}
       <div className="absolute inset-0 bg-white opacity-50"></div>
 
-      {/* Main Content */}
       <div className="relative w-full">
         <NavBar />
         <div className="w-full px-8 md:px-44 mx-auto py-12 md:py-16 lg:py-20">
@@ -126,7 +93,6 @@ export default withAuth(Component);
 
 interface IconProps {
   className?: string;
-  // Add any other props that your SVG component might receive
 }
 
 function FileIcon(props: IconProps) {
@@ -229,6 +195,3 @@ function WalletIcon(props: IconProps) {
     </svg>
   );
 }
-
-export { FileIcon, InboxIcon, KeyIcon, UserIcon, WalletIcon };
-

@@ -1,4 +1,3 @@
-//components/signature/sign.tsx
 import React, { useRef, useState, useEffect } from "react";
 import SignatureCanvas from "react-signature-canvas";
 import styles from "./sign_style.module.css";
@@ -8,25 +7,25 @@ interface SignaturePadProps {
 }
 
 const SignaturePad: React.FC<SignaturePadProps> = ({ closeModal }) => {
-  const sigCanvas = useRef<any>(null); // Initialize with `any` type to allow for null checks
-  const initialCanvas = useRef<any>(null); // Initialize with `any` type to allow for null checks
+  const sigCanvas = useRef<SignatureCanvas>(null);
+  const initialCanvas = useRef<SignatureCanvas>(null);
 
   const [step, setStep] = useState(1);
-  const [signatureData, setSignatureData] = useState<string | null>(null); // Specify null as possible type for signatureData
-  const [initialsData, setInitialsData] = useState<string | null>(null); // Specify null as possible type for initialsData
+  const [signatureData, setSignatureData] = useState<string | null>(null);
+  const [initialsData, setInitialsData] = useState<string | null>(null);
   const [sigBorderColor, setSigBorderColor] = useState("");
   const [initialBorderColor, setInitialBorderColor] = useState("");
 
   useEffect(() => {
     if (step === 1 && signatureData) {
-      sigCanvas.current?.fromDataURL(signatureData); // Null check with optional chaining
+      sigCanvas.current?.fromDataURL(signatureData);
       setSigBorderColor(styles.borderGreen);
     }
   }, [step, signatureData]);
 
   useEffect(() => {
     if (step === 2 && initialsData) {
-      initialCanvas.current?.fromDataURL(initialsData); // Null check with optional chaining
+      initialCanvas.current?.fromDataURL(initialsData);
       setInitialBorderColor(styles.borderGreen);
     }
   }, [step, initialsData]);
@@ -66,7 +65,6 @@ const SignaturePad: React.FC<SignaturePadProps> = ({ closeModal }) => {
       setInitialsData(dataURL);
       setInitialBorderColor(styles.borderGreen);
       setStep(3);
-      // Save to database here
       console.log("Signature and Initials saved:", { signatureData, initialsData });
     }
   };
@@ -138,5 +136,3 @@ const SignaturePad: React.FC<SignaturePadProps> = ({ closeModal }) => {
 };
 
 export default SignaturePad;
-
-

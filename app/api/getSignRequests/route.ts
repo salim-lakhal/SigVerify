@@ -12,20 +12,11 @@ export async function POST() {
   try {
     const client = await clientPromise;
     const db = client.db(process.env.DB_NAME || "sigverify");
-    const usersCollection = db.collection("users");
+    const signRequests = db.collection("signRequests");
 
-    const existingUser = await usersCollection.findOne({ userId });
+    const templates = await signRequests.find({ userId, status: "pending" }).toArray();
 
-    if (!existingUser) {
-      const user = {
-        userId,
-        createdAt: new Date(),
-      };
-
-      await usersCollection.insertOne(user);
-    }
-
-    return NextResponse.json({ message: "User checked/created successfully", userId });
+    return NextResponse.json({ templates });
   } catch (error) {
     console.error("Failed to connect to the database:", error);
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });

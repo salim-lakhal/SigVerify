@@ -11,11 +11,11 @@ const withAuth = (Component: ComponentType) => {
     const router = useRouter();
 
     useEffect(() => {
-/*       if (isLoaded && !isSignedIn) {
+      if (isLoaded && !isSignedIn) {
         if (typeof window !== 'undefined') {
           router.push('/sign-in');
         }
-      } */
+      }
     }, [isLoaded, isSignedIn, router]);
 
     if (!isLoaded || !isSignedIn) {
